@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br>
+<div class="letra-cuerpo">
+	<h1 style="text-align: center;">Registro</h1>
+	<p style="text-align: center;">Complete los campos para continuar</p><br>
+
+	<form method="post">
+		<br>
+		{% csrf_token %}
+		{{form.as_p}}
+		
+		<input class="offset-lg-5 btn btn-dark" type="submit" value="Ingresar"><br><br><br>
+	</form>
+</div>	<br><br>
+{% endblock %}

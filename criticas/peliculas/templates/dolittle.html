@@ -1,0 +1,58 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+	<img class="img-fluid" src="{% static 'img/portada-dolittle.jpg' %}">
+
+	<div class="cuerpo container">
+			<h2 class="titulos">
+				Dolittle | Top de críticas y reseñas
+			</h2><br>
+			<p class="letra-cuerpo">
+				Siete años después de perder a su mujer, el doctor John Dolittle (Robert Downey Jr.) se encierra en su mansión con la única compañía de sus animales exóticos. Cuando la reina cae enferma, tendrá que acudir en su ayuda para buscar una cura. Esto hará que viaje a una isla donde descubrirá maravillosas criaturas y se reencontrará con viejos enemigos en Las aventuras del Doctor Dolittle.
+			</p><br>
+
+			<p class="letra-cuerpo">
+				Medio siglo después desde que Rex Harrison hablara con los animales, y poco más de dos décadas desde que Eddie Murphy dio su propia representación, Las aventuras del Doctor Dolittle vuelven a la gran pantalla. Pero estas dos décadas han sido tiempo suficiente para que se desvanezca en nuestras consciencias. La productora Universal Studios, ha optado por revivir al personaje una vez más, reclutando al actor Robert Downey para interpretar el papel principal. A pesar de eso, sigue intentando limpiar su nombre después del decepcionante estreno de Cats. Universal después de estos dos fracasos, necesita saber mejor a que proyectos no dar luz verde y por el momento a ningún musical centrado en animales.
+			</p><br>
+
+			<iframe class="tamaño-videos" src="https://www.youtube.com/embed/hej47fWFLQs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+			<p class="letra-cuerpo">
+				Nada más empiezan Las aventuras del Doctor Dolittle, queda claro que el delicado encanto y el humor que se espera quedan lejos de lograse. Con este film, queda demostrado que el director Stephen Gaghan es irreparablemente inadecuado para este tipo de materiales.  Juega mal sus cartas en todos los momentos, le da un ritmo desesperante, no consigue hacer relucir a Dolittle y se queda muy lejos de producir cualquier impacto emocional en el espectador. Lo que más llama la atención es el trabajo técnico. Los impactantes efectos especiales y visuales han sido elaborados de mantera impecable y meticulosa. Totalmente opuesto al resto de elementos que lo componen.
+			</p><br>
+
+			<img class="tamaño-imagenes" src="{% static 'img/dr-dolittle.jpg' %}"><br>
+
+			<p class="letra-cuerpo">
+				Las tramas de Las aventuras del Doctor Dolittle se estancan continuamente, en cada parte, provocando una gran frustración. Está llena de intentos de momentos cómicos, con frases ingeniosas que no rompen y con frases contemporáneas aburridas. Supuestamente, el guion fue arreglado por Chris McKay (The Lego Batman Movie), pero ni con refuerzo lo han conseguido. Necesita una reconstrucción mucho más exhaustiva y por un escritor de comedia de situación, cualquiera que pueda darles a estos animales algo más divertido que decir.
+			</p><br>
+
+			<p class="letra-cuerpo">
+				Las aventuras del Doctor Dolittle demuestra ser tan predecible como desagradable. Lo que debería haber sido una aventura llena de asombro rápidamente se convierte en una horrible, gracias a una fórmula básica, repetitiva y por la fijación de los cineastas en chistes simples.
+			</p><br>
+
+			<p class="letra-cuerpo">Daniel Guzmán (tomatazos.com)</p>
+			<p class="letra-cuerpo">01 Febrero 2020</p><br>
+
+			<div class="ubicacion-cuerpo">
+			<h1>Dejanos tu opinion</h1><br>
+			<a href="{% url 'dolittle_create' %}"><input class="col-lg-3 col-md-4 col-sm-4 col-5 btn btn-secondary" type="button" name="registrar" value="Comentar"></a>
+			<a href="{% url 'comentariodolittle' %}"><input class="offset-lg-1 col-lg-3 col-md-5 col-sm-5 col-6 btn btn-secondary" type="button" name="registrar" value="Detalles Comentarios"></a><br><br><br>
+
+			{% for com in comentario %}
+				<div class="container" style="background-color:#6c6c6c;padding-bottom: 2%; border-style: solid;border-color: #000; border-width: 2px; border-radius: 10px">
+					<br>
+					<h1>{{com.usuario}}<h1>
+					<h4 class="letra-cuerpo" style="font-size: 35px;">{{com.descripcion}}</h4>
+					<p class="letra-cuerpo" style="font-size: 20px;">{{com.comentario}}</p><br>
+					
+						<a href="{% url 'endgame_delete' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Eliminar" ></a>
+							<a href="{% url 'endgame_update' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Editar" ><br><br></a>
+					
+				</div><br><br>
+			{% endfor %}
+
+	</div>
+	</div>
+{% endblock %}

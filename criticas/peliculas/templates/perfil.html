@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+	<div class="cuerpo">
+	<div class="ubicacion-cuerpo">
+		<h1>Perfil: {{ user.username }}</h1><br>
+	
+		<div class="letra-cuerpo">	
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Usuario: {{user.username}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Nombre: {{user.first_name}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Apellido: {{user.last_name}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Correo: {{user.email}}</p>
+			<br><br>
+	
+	</div>
+		<div class="row">
+		
+		
+			<a class="col-lg-1" href="{% url 'perfil_update' user.id %}"><input type="button" class="btn btn-secondary"  name="registrar" value="Editar"></a>
+			<a class="col-lg-2" href="{% url 'perfil_delete' user.id %}"><input type="button" class="btn btn-secondary"  name="contraseña" value="Eliminar cuenta"></a>
+			<a class="col-lg-2" href="{% url 'usuario_list' %}"><input type="button" class="btn btn-secondary"  name="registrar" value="Usuarios"></a>
+			<a class="offset-lg-3 col-lg-2" href="{% url 'logout' %}"><input type="button" class="btn btn-secondary"  name="logout" value="Cerrar sesion"></a>
+		
+		
+		</div><br><br>
+	</div>
+	</div>
+{% endblock %}

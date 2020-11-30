@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <div class="container cuerpo"><br><br>
+        <div class="letra-cuerpo">
+        <h1 style="text-align: center;">Actualizando perfil</h1><br><br>
+        
+            
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+                <p class="col-lg-3">Nombre: </p>{{form.first_name}}
+                </div><br>
+                <div class="row">
+                <p class="col-lg-3">Apellido: </p>{{form.last_name}}
+                </div><br>
+                <div class="row">
+                <p class="col-lg-3">Correo: </p>{{form.email}}
+                </div><br>
+                <input class="offset-lg-3 btn btn-dark" type="submit" value="Enviar"><br><br><br>
+            </form>
+        </div><br><br>
+    </div>
+{% endblock %}

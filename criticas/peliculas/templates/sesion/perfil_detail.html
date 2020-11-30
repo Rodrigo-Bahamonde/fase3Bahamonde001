@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	<div class="container cuerpo" style="margin-bottom: -2%;">
+	<br><br>
+	<div class="letra-cuerpo">
+	<h1>Perfil</h1>
+	<br>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Usuario: {{perfil.usuario}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Nombre: {{perfil.nombre}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Apellido: {{perfil.apellido}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Edad: {{perfil.edad}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Género: {{perfil.genero}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Nacionalidad: {{perfil.nacionalidad}}</p>
+			<p class="letra-cuerpo" style="margin-left: 2%;!important">Correo: {{perfil.correo}}</p>
+			<br><br>
+	</div>
+	</div>
+{% endblock %}

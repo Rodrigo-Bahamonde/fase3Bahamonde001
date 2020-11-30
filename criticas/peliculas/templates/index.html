@@ -1,0 +1,96 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="caja-carrusel">
+		<div id="carrusel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+        		<li data-target="#carrusel" data-slide-to="0" class="active"></li>
+        		<li data-target="#carrusel" data-slide-to="1"></li>
+        		<li data-target="#carrusel" data-slide-to="2"></li>
+        		<li data-target="#carrusel" data-slide-to="3"></li>
+      		</ol>
+
+      		<div class="carousel-inner">
+      			<div class="carousel-item active">
+      				{% load static %}
+      				<img class="imagen-carrusel" src="{% static 'img/carrusel1.jpg' %}">
+      				
+      			</div>
+
+      			<div class="carousel-item">
+      				<img class="imagen-carrusel" src="{% static 'img/carrusel2.jpg' %}">
+      			</div>
+
+      			<div class="carousel-item">
+      				<img class="imagen-carrusel" src="{% static 'img/carrusel3.jpg' %}">
+      			</div>
+
+      			<div class="carousel-item">
+      				<img class="imagen-carrusel" src="{% static 'img/carrusel4.jpg' %}">
+      			</div>
+
+      		</div>
+
+      		<a class="carousel-control-prev" href="#carrusel" data-slide="prev" >
+        	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        	<span class="sr-only">Anterior</span>
+      		</a>
+
+      		<a class="carousel-control-next" href="#carrusel" data-slide="next" >
+        	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+        	<span class="sr-only">Siguiente</span>
+      		</a>
+
+		</div>
+	</div>
+
+	<div class="cuerpo container">
+			<div class="row" style="padding-top: 4%;padding-bottom: 4%;">
+				<div class="caja-sinopsis col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+					<a href="{% url 'endgame' %}">
+						<img class="imagen-enlace" src="{% static 'img/end-game.jpg' %}">
+						<h3 class="titulos">Avengers: End Game</h3>
+						<p class="letra-sinopsis container">
+						Los Vengadores restantes deben encontrar una manera de recuperar a sus aliados para un enfrentamiento épico con Thanos, el malvado que diezmó el planeta y el universo.
+						</p>
+					</a>
+				</div>
+			
+
+			
+			<div class="caja-sinopsis col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+					<a href="{% url 'dolittle' %}">
+						<img class="imagen-enlace" src="{% static 'img/dolittle.jpg' %}">
+						<h3 class="titulos" id="titulo">Dr. Dolittle</h3>
+						<p class="letra-sinopsis container">
+						El Dr. John Dolittle vive solo detrás de los muros de su exuberante mansión en la Inglaterra del siglo XIX. Su única compañía proviene de una variedad de animales exóticos con los que habla a diario. Pero cuando la joven reina Victoria se enferma gravemente, el médico excéntrico y sus amigos peludos se embarcan en una aventura épica en una isla mítica para encontrar la cura.
+						</p>
+					</a>
+			</div>
+			</div>
+
+			<div class="row" style="padding-top: 4%;padding-bottom: 4%;">
+			<div class="caja-sinopsis col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+					<a href="{% url 'guerra' %}">
+						<img class="imagen-enlace" src="{% static 'img/1917.jpg' %}">
+						<h3 class="titulos" id="titulo">1917</h3>
+						<p class="letra-sinopsis container">
+						Durante la Primera Guerra Mundial, dos jóvenes soldados británicos reciben una orden, aparentemente, imposible de ejecutar: en una carrera contra el reloj, deben infiltrarse en territorio enemigo para entregar un mensaje que podría salvar a miles de compañeros.
+						</p>
+					</a>
+			</div>
+
+			<div class="caja-sinopsis col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+					<a href="{% url 'joker' %}">
+						<img class="imagen-enlace" src="{% static 'img/joker.jpg' %}">
+						<h3 class="titulos"id="titulos">Joker</h3>
+						<p class="letra-sinopsis container">
+						Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.
+						</p>
+					</a>
+			</div>
+			</div>
+
+		</div>
+	
+{% endblock %}

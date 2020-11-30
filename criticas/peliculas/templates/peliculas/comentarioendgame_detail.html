@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	<div class="container cuerpo" style="margin-bottom: -2%;">
+	<br><br>
+	<div class="letra-cuerpo">
+	<h1>Comentario</h1>
+	<br>	
+		<ul>
+			<li>
+				<p class="letra-cuerpo" style="margin-left: 2%;!important">Autor: {{ comentarioendgame.usuario }}</p>
+				<p class="letra-cuerpo" style="margin-left: 2%;!important">Descripcion: {{ comentarioendgame.descripcion }}</a></p>
+				<p class="letra-cuerpo" style="margin-left: 2%;!important">Comentario: {{comentarioendgame.comentario}}</p>
+				<p class="letra-cuerpo" style="margin-left: 2%;!important">Fecha: {{comentarioendgame.fecha}}</p><br><br>
+			</li>
+		</ul>
+	</div>
+	</div>
+{% endblock %}

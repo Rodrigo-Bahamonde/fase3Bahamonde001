@@ -1,0 +1,66 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+	<img class="img-fluid" src="{% static 'img/portada-1917.jpg' %}">
+
+	<div class="cuerpo container">
+			<h2 class="titulos">
+				'1917': no te creas las maravillas que se han escrito sobre este espectáculo narcisista
+			</h2><br>
+			<p class="letra-cuerpo">
+				onsiderando su bagaje en el mundo del teatro, en el que ya era un aclamado director mucho antes de dirigir 'American Beauty' (1999), resulta llamativo que a lo largo de su carrera cinematográfica el británico Sam Mendes haya dado muestras de interesarse más por los aspectos puramente técnicos del lenguaje cinematográfico que por aquellos —construcción de personajes, ritmo y estructura narrativos, cosas así— que lo conectan con el de los escenarios. Dicho de otro modo, parece preocuparse por convencer al espectador a través del aspecto que sus películas lucen proyectadas en la pantalla que por la hondura, la sensatez o la sutileza de lo que tratan de explicar. Y eso nunca había quedado tan claro como lo hace en su último trabajo.
+			</p><br>
+
+			<p class="letra-cuerpo">
+				Rodada con la participación de cientos de extras y a partir de una sucesión de complejísimas coreografías, y completada gracias a numerosos efectos visuales, '1917' es casi una hazaña en términos de técnica, planificación y ejecución; después de todo, sus dos horas de metraje transcurren a lo largo de lo que parecen dos únicos y deslumbrantes planos secuencia, aunque son algunos más —han sido montados entre sí de manera que los cortes resultan imperceptibles, o casi, y se genera sensación de continuidad—. Y el resultado es imponente, sí, pero da la sensación de ser más un catálogo de trucos que una obra verdaderamente comprometida con el asunto que dice tratar.
+			</p><br>
+
+			<iframe class="tamaño-videos" src="https://www.youtube.com/embed/plh31-GExC8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+			<p class="letra-cuerpo">
+				'1917' se sitúa en medio de la Primera Guerra Mundial, en las trincheras y los campos de batalla del norte de Francia. Dos soldados británicos, Blake y Schofield, son designados para cruzar las líneas enemigas y entregar un mensaje urgente a sus oficiales en el frente con el fin de evitar lo que podría ser la masacre de cientos de compañeros, entre quienes se encuentra el hermano de Blake. A partir de entonces, aunando elementos narrativos de 'Salvar al soldado Ryan' (1998) y el estilo visual de 'Dunkerque' (2017), utiliza el viaje de los jóvenes para recordarnos el sinsentido de la guerra y la barbarie que causa. Al menos, se supone, esa es la idea.
+			</p><br>
+
+			<img class="tamaño-imagenes" src="{% static 'img/guerra.jpg' %}"><br>
+
+			<p class="letra-cuerpo">
+				Blake y Schofield avanzan a través de hileras de cadáveres en estado de putrefacción, de túneles y prados, graneros abandonados y ciudades en ruinas. Y en el proceso, mientras sortean alambradas y esquivan bombas y hasta aviones que se estrellan justo a su lado, gradualmente va quedando claro que no son seres humanos sino héroes de tebeo y que, según '1917' la retrata, la guerra misma parece haber sido diseñada específicamente para acabar con ellos.
+			</p><br>
+
+			<h2 class="titulos">Mendes trata a sus protagonistas como meros personajes de videojuego que progresan entre niveles de dificultad</h2><br>
+
+			<p class="letra-cuerpo">
+				Mendes ha asegurado que coescribió la película —junto a Krysty Wilson-Cairns— inspirándose en historias de la Gran Guerra que escuchó a su abuelo. Y para verle las intenciones de proporcionar al espectador una experiencia avasalladoramente emocional, no hay más que fijarse en la pomposa música de Thomas Newman, que tan presente está en la banda sonora. Pero, para ser capaces de provocar nuestra empatía, Blake y Schofield deberían estar dotados de unas personalidades mínimamente formadas; en lugar de eso, no son más que cuerpos en movimiento. Cierto, para ellos cada minuto es una lucha por sobrevivir y por tanto no tienen tiempo para momentos de introspección pero, más allá de eso, lo cierto es que Mendes los trata como meros personajes de videojuego que progresan entre niveles de dificultad. Mientras lo hacen, se trasladan de un escenario al siguiente y los paisajes se transforman con fluidez, ajenos a los dictados del espacio y el tiempo y de toda consideración que no sea situarnos en el centro de la acción.
+			</p><br>
+
+			<p class="letra-cuerpo">
+				El argumento más extendido en defensa del uso de los planos secuencia como herramienta de narración cinematográfica es que favorecen la inmersión del espectador en el universo de los personajes y la creación de tensión dramática. Lo cierto, sin embargo, es que en la mayoría de ocasiones funcionan sobre todo como narcisistas artificios. Sin duda, Mendes y el cinematógrafo Roger Deakins han recurrido a la estrategia confiando en que nos arrojaría justo en el centro de la zona de guerra y nos haría sentir en carne viva el pánico y la claustrofobia. Pero, muy al contrario, esa sucesión de elaboradísimos 'travelings' acaba siendo casi una distracción, en tanto que en lugar de poner el foco en lo que sucede dentro del plano lo pone en el plano mismo, invitándonos a contemplar la virguería boquiabiertos y a preguntarnos por todo el trabajo y el talento que fueron necesarios para llevarla a cabo. Por eso, pese a que '1917' trata de erigirse en un homenaje a quienes murieron por su país, en última instancia su sentido del espectáculo tiene menos que ver con el miedo y el sufrimiento humanos que con el lucimiento personal de quienes lo idearon.
+			</p><br>
+
+			<p class="letra-cuerpo">Alejandro Alegré (elconfidencial.com)</p>
+			<p class="letra-cuerpo">10 Enero 2020</p><br>
+
+			<div class="ubicacion-cuerpo">
+				<h1>Dejanos tu opinion</h1><br>
+				<a href="{% url 'guerra_create' %}"><input class="col-lg-3 col-md-4 col-sm-4 col-5 btn btn-secondary" type="button" name="registrar" value="Comentar"></a>
+				<a href="{% url 'comentarioguerra' %}"><input class="offset-lg-1 col-lg-3 col-md-5 col-sm-5 col-6 btn btn-secondary" type="button" name="registrar" value="Detalles Comentarios"></a><br><br><br>
+				
+				{% for com in comentario %}
+					<div class="container" style="background-color:#6c6c6c;padding-bottom: 2%; border-style: solid;border-color: #000; border-width: 2px; border-radius: 10px">
+					<br>
+					<h1>{{com.usuario}}<h1>
+					<h4 class="letra-cuerpo" style="font-size: 35px;">{{com.descripcion}}</h4>
+					<p class="letra-cuerpo" style="font-size: 20px;">{{com.comentario}}</p><br>
+					
+						<a href="{% url 'endgame_delete' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Eliminar" ></a>
+							<a href="{% url 'endgame_update' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Editar" ><br><br></a>
+					
+					</div><br><br>
+				{% endfor %}
+				
+			</div>
+
+		</div>
+	</div>
+{% endblock %}

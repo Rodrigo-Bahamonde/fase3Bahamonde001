@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	<div class="container cuerpo" style="margin-bottom: -2%;">
+	<br><br>
+	<div class="letra-cuerpo">
+	<h1>Usuarios</h1>
+	<br>
+	{% if user_list %}
+		<ul>
+
+			{% for usuario in user_list %}
+			<li>
+				<p class="letra-cuerpo" style="margin-left: 2%;!important">Nombre de usuario: {{ usuario.username }}</p>
+				<p class="letra-cuerpo" style="margin-left: 2%;!important">Correo: {{usuario.email}}</p>
+				<a href="{% url 'perfil_delete' user.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Eliminar" ></a>
+				<a href="{% url 'perfil_update' user.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Editar" ></a>
+				<br><br><br>
+			</li>
+			{% endfor %}
+		
+		</ul>
+	{% else %}
+		
+		<p class="letra-cuerpo">No se han registrado Usuarios</p><br><br>
+	
+	{% endif %}
+	</div>
+	</div>
+{% endblock %}

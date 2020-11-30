@@ -1,0 +1,281 @@
+body{
+	background: url('../img/fondo.jpg');
+	background-color: #2c2c2c;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+header{
+	background-color: #191919;
+	padding-bottom: 3%;
+}
+
+@media (min-width: 306px)
+	{h1{
+	font-size: 250%;
+	color:#fff;
+}}
+
+@media (max-width: 305px)
+	{h1{
+	font-size: 200%;
+	color:#fff;
+}}
+
+#nav{
+	padding-top: 3%;
+	padding-bottom: 3%;
+
+}
+
+.menu{
+	font-size: 25px;
+}
+
+@media (min-width: 331px)
+	{#logo{
+	width: 100px;
+	height: 100px;
+}}
+
+@media (max-width: 330px)
+	{#logo{
+	width: 75px;
+	height: 60px;
+}}
+
+.caja-carrusel{
+	background-color: #2c2c2c;
+}
+
+img{
+	max-width: 100%;
+}
+
+.galeria{
+	width: 300px;
+	height: 250px;
+	display: block;
+	margin: auto;
+}
+
+.galeria:hover{
+	border: 5px solid #f7f7f7;
+}
+
+.letra-galeria{
+	color:#fff;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	background-color: #000;
+
+}
+
+.card{
+	background-color: #2c2c2c !important;
+}
+
+@media screen and (min-width: 770px)
+	{.imagen-carrusel{
+	width:850px; 
+	height:550px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 769px){
+	.imagen-carrusel{
+	width:400px; 
+	height:250px;
+	display: block;
+	margin: auto;
+	}
+}
+
+a{
+	color:#fff;
+}
+
+a:hover{
+	color:#9c9c9c;
+	border-color: #000 #000 #000;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1200px)
+	{.imagen-enlace{
+	width:850px; 
+	height:575px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (min-width: 902px) and (max-width: 1199px)
+	{.imagen-enlace{
+	width:850px; 
+	height:500px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (min-width: 768px) and (max-width: 901px)
+	{.imagen-enlace{
+	width:850px; 
+	height:750px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 409px)
+	{.imagen-enlace{
+	width:850px; 
+	height:400px;
+	display: block;
+	margin: auto;
+}}
+
+.cuerpo{
+	width: 100%;
+	background-color: #4c4c4c;
+}
+
+.caja-sinopsis{
+	width: 40%;
+	height: auto;
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 2%;
+	background-color: #555;
+	padding-top:2%;
+}
+
+
+@media screen and (min-width: 346px)
+	{.titulos{
+	font-size: 38px;
+	padding-top: 2%;
+	text-align: center;
+	color: #fff;
+}}
+
+
+@media screen and (max-width: 345px)
+	{.titulos{
+	font-size: 25px;
+	padding-top: 5%;
+	text-align: center;
+	color: #fff;
+}}
+
+.letra-sinopsis{
+	color:#fff;
+	text-align: justify;
+}
+
+.letra-cuerpo{
+	color:#fff;
+	text-align: justify;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.jumbotron{
+	background-color: #191919 ;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.titulo-pie{
+	text-align: center;
+	color:#fff;
+}
+
+.letra-pie{
+	text-align: center;
+	color:#fff;
+}
+
+.letra-registro{
+	color:#fff;
+}
+
+.ubicacion-cuerpo{
+	padding-top: 3%;padding-bottom: 3%;margin-left: 15%;margin-right: 5%;
+}
+
+
+
+@media screen and (min-width: 1200px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 890px;
+	height: 500px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 750px;
+	height: 425px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 550px;
+	height: 315px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 767px) and (min-width: 475px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 400px;
+	height: 225px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 474px) and (min-width: 420px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 350px;
+	height: 200px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 419px) and (min-width: 370px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 300px;
+	height: 175px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 370px) and (min-width: 321px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 250px;
+	height: 150px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 320px) and (min-width: 281px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 220px;
+	height: 125px;
+	display: block;
+	margin: auto;
+}}
+
+@media screen and (max-width: 280px)
+	{.tamaño-videos, .tamaño-imagenes{
+	width: 175px;
+	height: 100px;
+	display: block;
+	margin: auto;
+}}

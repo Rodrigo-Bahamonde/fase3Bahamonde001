@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br>
+<div class="letra-cuerpo">
+
+	<h1>Bienvenido a <em>El Cinéfilo</em></h1><br><br>
+
+	<h2 style="text-align: center;">Inicio de Sesion</h2><br>
+	
+	<form method="post">
+		<br>
+		{% csrf_token %}
+		<div class="row letra-cuerpo" style="margin-bottom: 2%;">
+            <p class="col-lg-4 col-md-12 col-sm-12 col-12">Nombre de Usuario: </p>{{form.username}}
+        </div>
+        <div class="row letra-cuerpo" style="margin-bottom: 2%;">
+            <p class="col-lg-4 col-md-12 col-sm-12 col-12">Contraseña: </p>{{form.password}}
+        </div>
+		
+		
+		<input class="offset-lg-5 btn btn-dark" type="submit" value="Ingresar"><br><br><br>
+	</form>
+
+	
+</div>
+<br><br>
+{% endblock %}

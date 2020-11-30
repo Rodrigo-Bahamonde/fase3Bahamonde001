@@ -1,0 +1,74 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+	<div class="cuerpo">
+	<div class="ubicacion-cuerpo">
+		<h1>Registro</h1><br>
+
+		<form autocomplete="on">
+			<div class="row">
+				<label class="col-lg-3 col-md-12 col-sm-12 letra-registro">Nombre:</label>
+				<input class="col-lg-4 col-md-10 col-sm-8 col-8" type="text" name="nombre" id="Nombre">
+			</div><br>
+			<div id="alert-nombre">
+				
+			</div>
+			<div class="row">
+				<label class="col-lg-3 letra-registro">Apellido:</label>
+				<input class="col-lg-4 col-md-10 col-sm-8 col-8" type="text" name="apellido" id="Apellido">
+			</div><br>
+			<div class="row">
+				<label class="col-lg-3 letra-registro">Edad:</label>
+				<input class="col-lg-4 col-md-10 col-sm-8 col-8" type="text" name="edad" id="Edad">
+			</div><br>
+			<div class="row">
+				<label class="col-lg-3 letra-registro">Genero:</label>
+			<div class="form-ckeck col-lg-4 col-md-10 col-sm-8 col-8">
+				<input class="form-check-input estilo-check" type="radio" name="checkbox" id="Checkbox1">
+				<label class="form-check-label letra-registro" for="Checkbox1">Masculino</label><br>
+				<input class="form-check-input estilo-check" type="radio" name="checkbox" id="Checkbox2">
+				<label class="form-check-label letra-registro" for="Checkbox2">Femenino</label>
+			</div>
+			</div><br>
+			<div class="row">
+				<label class="col-lg-3 letra-registro">Nacionalidad:</label>
+		 		<select class="col-lg-4 col-md-10 col-sm-8 col-8" id="Opciones" name="opciones">
+                	<option value="">- Selecciona una opción -</option>
+                	<option value="1">Argentina</option>
+                	<option value="2">Bolivia</option>
+                	<option value="3">Chile</option>
+                	<option value="4">Colombia</option>
+                	<option value="5">Costa Rica</option>
+                	<option value="6">Cuba</option>
+                	<option value="7">Ecuador</option>
+                	<option value="8">El Salvador</option>
+                	<option value="9">Guatemala</option>
+                	<option value="10">Honduras</option>
+                	<option value="11">México</option>
+                	<option value="12">Nicaragua</option>
+                	<option value="13">Panamá</option>
+                	<option value="14">Paraguay</option>
+                	<option value="15">Perú</option>
+                	<option value="16">Puerto Rico</option>
+               	 	<option value="17">República Dominicana</option>
+                	<option value="18">Uruguay</option>
+                	<option value="19">Venezuela</option>
+                	<option value="20">España</option>
+                	<option value="21">Guinea Ecuatorial</option>
+                	<option value="22">Otro</option>
+            	</select>
+			</div><br>
+			<div class="row">
+				<label class="col-lg-3 letra-registro">Contraseña:</label>
+				<input class="col-lg-4 col-md-10 col-sm-8 col-8" type="password" name="contraseña1" id="Contraseña1">
+			</div><br>
+			<div class="row">
+				<label class="col-lg-3 letra-registro">Repetir contraseña:</label>
+				<input class="col-lg-4 col-md-10 col-sm-8 col-8" type="password" name="contraseña2" id="Contraseña2">
+			</div><br>
+			<input class="offset-lg-3 col-lg-2 col-md-3 col-sm-4 col-5 btn btn-secondary" type="button" name="registrar" value="Registrar" onclick="Validar()"><br><br>
+		</form>
+	</div>
+	</div>
+{% endblock %}

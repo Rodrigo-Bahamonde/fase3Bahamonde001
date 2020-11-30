@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <div class="container cuerpo"><br><br>
+    <h1 style="text-align: center;">Creando comentarios</h1><br><br>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="letra-cuerpo ">
+            <div class="row" style="margin-bottom: 2%;">
+            <p class="col-lg-2 col-md-12 col-sm-12 col-12">Descripcion: </p>{{form.descripcion}}
+            </div>
+            <div class="row" style="margin-bottom: 2%;">
+            <p class="col-lg-2 col-md-12 col-sm-12 col-12">Comentario: </p>{{form.comentario}}
+            </div>
+            <div class="row" style="margin-bottom: 2%;">
+            <p class="col-lg-2 col-md-12 col-sm-12 col-12">Fecha: </p>{{form.fecha}}
+            </div>
+        </div><br>
+        <input class="offset-lg-3 btn btn-dark" type="submit" value="Enviar"><br><br><br>
+    </form>
+    </div>
+{% endblock %}

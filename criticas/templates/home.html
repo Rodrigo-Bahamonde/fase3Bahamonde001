@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="letra-cuerpo ">
+	<br><br>
+	<h1>Bienvenido a <em>El Cinéfilo</em></h1><br>
+
+{% if user.is_authenticated %}
+	<h3>Hola! {{user.username}}</h3>
+
+{% else %}
+	<div style="margin-bottom: 10%; margin-top: 7%; text-align: center;">
+	<h1>No has iniciado sesion</h1><br>
+	<a href="{% url 'login' %}" class="btn btn-dark"><h4>Iniciar Sesion</h4></a><br><br>
+	<a href="{% url 'signup' %}" class="btn btn-dark"><h4>Registrate</h4></a>
+	</div>
+{% endif %}
+</div><br><br><br>
+{% endblock %}
