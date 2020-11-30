@@ -46,10 +46,16 @@
 					<h1>{{com.usuario}}<h1>
 					<h4 class="letra-cuerpo" style="font-size: 35px;">{{com.descripcion}}</h4>
 					<p class="letra-cuerpo" style="font-size: 20px;">{{com.comentario}}</p><br>
-					
+					{% if user.is_staff %}
 						<a href="{% url 'endgame_delete' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Eliminar" ></a>
 							<a href="{% url 'endgame_update' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Editar" ><br><br></a>
-					
+					{% else %}
+						{% if user == com.usuario %}
+
+							<a href="{% url 'endgame_delete' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Eliminar" ></a>
+							<a href="{% url 'endgame_update' com.id %}"><input class="offset-lg-1 col-lg-2 col-md-3 col-sm-3 col-4 btn btn-dark" type="button" name="registrar" value="Editar" ><br><br></a>
+						{% endif %}
+					{% endif %}
 				</div><br><br>
 			{% endfor %}
 

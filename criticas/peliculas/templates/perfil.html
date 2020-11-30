@@ -16,12 +16,16 @@
 	</div>
 		<div class="row">
 		
-		
+		{% if user.is_staff %}
 			<a class="col-lg-1" href="{% url 'perfil_update' user.id %}"><input type="button" class="btn btn-secondary"  name="registrar" value="Editar"></a>
 			<a class="col-lg-2" href="{% url 'perfil_delete' user.id %}"><input type="button" class="btn btn-secondary"  name="contraseña" value="Eliminar cuenta"></a>
 			<a class="col-lg-2" href="{% url 'usuario_list' %}"><input type="button" class="btn btn-secondary"  name="registrar" value="Usuarios"></a>
 			<a class="offset-lg-3 col-lg-2" href="{% url 'logout' %}"><input type="button" class="btn btn-secondary"  name="logout" value="Cerrar sesion"></a>
-		
+		{% else %}	
+			<a class="col-lg-1" href="{% url 'perfil_update' user.id %}"><input type="button" class="btn btn-secondary"  name="registrar" value="Editar"></a>
+			<a class="col-lg-2" href="{% url 'perfil_delete' user.id %}"><input type="button" class="btn btn-secondary"  name="contraseña" value="Eliminar cuenta"></a>
+			<a class="offset-lg-5 col-lg-2" href="{% url 'logout' %}"><input type="button" class="btn btn-secondary"  name="logout" value="Cerrar sesion"></a>
+		{% endif %}
 		
 		</div><br><br>
 	</div>
