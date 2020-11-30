@@ -1,0 +1,10 @@
+admin: rosales contraseña: rosales
+usuario: cachupin contraseña: hakuna123 (puede crear usuario desde el registro de la pagina)
+
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/peliculas/endgame/ (como administrador)
+http://127.0.0.1:8000/peliculas/endgame/ (como usuario)
+http://127.0.0.1:8000/accounts/perfil/
+http://127.0.0.1:8000/accounts/usuarios/ (Como administrador)
+
+http://127.0.0.1:8000/users/ (api)
