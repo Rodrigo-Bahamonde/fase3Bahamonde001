@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SOCIAL_AUTH_FACEBOOK_KEY = '382277799498364'
+SOCIAL_AUTH_FACEBOOK_SECRET = '79fa534af9dfe2f04a8111dbe4f1239c'
 
 # Application definition
 
@@ -41,8 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'peliculas.apps.PeliculasConfig',
     'sesion.apps.SesionConfig',
+    'rest_framework',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
